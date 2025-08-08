@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import BitLayerPurposeABI from '../../abi/BitLayerPurpose.json';
 
-const contractAddress = "YOUR_DEPLOYED_CONTRACT_ADDRESS_HERE";
+const contractAddress = "0x5a21501460C169c3753a76620648557c705AF82Exs";
 
 function App() {
   const [purpose, setPurpose] = useState("");
@@ -13,8 +13,7 @@ function App() {
   useEffect(() => {
     const loadBlockchain = async () => {
       if (window.ethereum) {
-        const provider = new ethers.BrowserProvider(connection);
-        const signer = await provider.getSigner();
+        const provider = new ethers.BrowserProvider(window.ethereum);
         const signer = await provider.getSigner();
         const userAccount = await signer.getAddress();
         const instance = new ethers.Contract(contractAddress, BitLayerPurposeABI, signer);
