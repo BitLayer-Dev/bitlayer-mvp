@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserProvider, Contract } from 'ethers';
-import BitLayerPurposeABI from '../abi/BitLayerPurpose.json'; // adjust the path if needed
+import BitLayerPurposeABI from '../abi/BitLayerPurpose.json'; // make sure this path is correct
 
 const contractAddress = "0x5a21501460C169c3753a76620648557c705AF82E";
 
