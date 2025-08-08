@@ -13,7 +13,8 @@ function App() {
   useEffect(() => {
     const loadBlockchain = async () => {
       if (window.ethereum) {
-        const provider = new ethers.BrowserProvider(window.ethereum);
+        const provider = new ethers.BrowserProvider(connection);
+        const signer = await provider.getSigner();
         const signer = await provider.getSigner();
         const userAccount = await signer.getAddress();
         const instance = new ethers.Contract(contractAddress, BitLayerPurposeABI, signer);
