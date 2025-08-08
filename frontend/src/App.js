@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import BitLayerPurposeABI from '../../abi/BitLayerPurpose.json';
 
-const contractAddress = "0x5a21501460C169c3753a76620648557c705AF82Exs";
+const contractAddress = "0x5a21501460C169c3753a76620648557c705AF82E";
 
 function App() {
   const [purpose, setPurpose] = useState("");
